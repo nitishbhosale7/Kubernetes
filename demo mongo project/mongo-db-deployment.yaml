@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: Deployment
 metadata:
   name: mongo-deployment
@@ -37,7 +37,7 @@ metadata:
   name: mongo-service
 spec:
   selector:
-    app: mongo
+    app: mongo-deployment
   ports:
     - protocol: TCP
       port: 27017
